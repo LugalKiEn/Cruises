@@ -1,0 +1,91 @@
+html,
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: 'Bitter', serif;
+}
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.page-header {
+    min-height: 600px;
+    background-image: url("../img/sochi-2258855.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.menu img {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+ul li {
+    list-style: none;
+    font-family: Raleway, serif;
+}
+.header-menu {
+    float: left;
+    width: 520px;
+    margin: 0;
+    margin-top: -22px;
+    margin-left: 655px;
+    padding: 0;
+    list-style: none;
+}
+.header-menu li {
+   float: left;
+    margin-right: 25px;
+}
+.contact-information {
+    float: left;
+    margin: 0;
+    margin-left: 880px;
+    margin-top: -50px;
+}
+.logo {
+  float: left;
+    margin: 0;
+    margin-left: 550px;
+}
+.promo {
+    text-align: center;
+}
+.promo p {
+    font-family: 'Bitter', serif;
+    font-weight: normal;
+    color: #0d3351;
+}
+.promo p:first-child {
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0;
+    font-family: 'RalewayBold', serif;
+}
+.promo p:last-child {
+    font-size: 100px;
+    line-height: : 48px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.button {
+    display: inline-block;
+    float:left;
+    margin: 0;
+    margin-left: 630px;
+    margin-top: 35px;
+    background-color: #33c7fd;
+    width: 150px;
+    height: 50px;
+    
+}
+a {
+    text-decoration: none;
+    font-family: 'Raleway', serif;
+}
