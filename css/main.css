@@ -3,10 +3,10 @@ body {
     min-width: 1200px;
     margin: 0;
     padding: 0;
-    background-color: #f3f3f3;
     font-family: 'Bitter', serif;
     color: #0d3351;
     font-size: 18px;
+    background-color: #f3f3f3;
 }
 .container {
     width: 1180px;
@@ -27,6 +27,7 @@ body {
 .menu img {
     margin-left: 50px;
     margin-top: 50px;
+    cursor: pointer;
 }
 ul li {
     list-style: none;
@@ -40,6 +41,7 @@ ul li {
     margin-left: 450px;
     padding: 0;
     list-style: none;
+    cursor: pointer;
 }
 .header-menu li {
    float: left;
@@ -52,7 +54,7 @@ ul li {
     width: 10px;
     height: 12px;
     background-image: url("../img/css_sprites.png");
-    background-position: -40px -10px;
+    background-position: -44px -48px;
     margin-right: 5px;
 }
 .header-menu  li::after {
@@ -61,7 +63,7 @@ ul li {
     width: 8px;
     height: 5px;
     background-image: url("../img/css_sprites.png");
-    background-position: -10px -42px;
+    background-position: -10px -82px;
     margin-left: 5px;
     vertical-align: middle;
 }
@@ -71,11 +73,11 @@ ul li {
     width: 10px;
     height: 12px;
     background-image: url("../img/css_sprites.png");
-    background-position: -10px -10px;
+    background-position: -82px -46px;
     margin-right: 5px;
 }
 .contact-information {
-    float: left;
+    float: right;
     margin: 0;
     margin-left: 800px;
     margin-top: -50px;
@@ -116,6 +118,7 @@ ul li {
     width: 200px;
     background: #33c7fd;
     margin-top: 25px;
+    margin-bottom: 30px;
     padding: 20px 0;
     transform: scale(1);
     transition: all 0.5s ease-in-out;
@@ -124,6 +127,9 @@ ul li {
 .order:hover, .more:hover {
     transform: scale(1.15);
     transition: all 0.5s ease-in-out;
+}
+.order:active, .more:active {
+    opacity: 0.5;
 }
 .line {
     text-align: center;
@@ -145,7 +151,7 @@ h2 {
     width: 8px;
     height: 5px;
     background-image: url("../img/css_sprites.png");
-    background-position: -10px -42px;
+    background-position: -10px -82px;
     margin-left: 8px;
     vertical-align: middle; 
 }
@@ -159,6 +165,7 @@ h2 {
     margin-right: 30px;
     transform: scale(1);
     transition: all 0.5s ease-in-out;
+    cursor: pointer;
 }
 .catalog-item p, h3 {
         margin-left: 30px;
@@ -194,11 +201,167 @@ h3::after {
     transform: scale(1.05);
     transition: all 0.5s ease-in-out;
 }
+.catalig-item:active {
+}
 .more::after {
     content: '';
     display: inline-block;
     border: 5px solid transparent;	
     border-top: 5px solid #fff;
     margin-left: 8px;
-        vertical-align: bottom;
+    vertical-align: bottom;
+}
+.hit::after {
+    content: 'Хит продаж';
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    top: -6px;
+    left: 424px;
+    position: absolute;
+    width: 87px;
+    height: 100px;
+    background: url("../img/tag.png");
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+}
+.stock::after {
+    content: 'Акция';
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    top: -6px;
+    left: 424px;
+    position: absolute;
+    width: 87px;
+    height: 100px;
+    background: url("../img/tag1.png");
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff; 
+}
+.discount::after {
+    content: 'Скидка: 10%';
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    top: -6px;
+    left: 424px;
+    position: absolute;
+    width: 87px;
+    height: 100px;
+    background: url("../img/tag1.png");
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff; 
+}
+.btn-up {
+    position: fixed;
+    bottom: -50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background: #333;
+    z-index: 100;
+    cursor: pointer;
+    outline: 0;
+    transition: 0.4s;
+}
+.btn-up::after {
+    content:'';
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 4px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.btn-up.active {
+    bottom: 50px;
+}
+.page-footer {
+    background: #fff;
+    padding-bottom: 40px;
+}
+.footer-menu ul {
+    padding-top: 30px;
+}
+.footer-menu ul li {
+    margin-bottom: 15px;
+    margin-left: -20px;
+}
+.footer-menu ul li:hover {
+    text-decoration: underline;
+}
+.footer-menu ul li:active {
+    opacity: 0.5;
+}
+.footer-menu ul li a {
+    text-decoration: none;
+    color: #0d3351;
+}
+.footer-social {
+    text-align: center;
+    margin-top: -105px;
+}
+.social-btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 5px;
+    vertical-align: middle;
+    color: #ffffff;
+    background-color: #0d3351;
+    background-image: url("../img/css_sprites.png");
+    background-repeat: no-repeat;
+    font-size: 0;
+    border: 3px solid #1a74bb
+}
+.social-btn:last-child {
+    margin-right: 0;
+}
+.social-btn-vk {
+    background-position: -38px 0px;
+}
+.social-btn-ok {
+    background-position: -72px -4px;
+}
+.social-btn-yt {
+    background-position: -2px -4px;
+}
+.social-btn-in {
+    background-position: -2px -40px;
+}
+.social-btn:hover {
+    border-color:  #5cb5fb;
+}
+.social-btn:active {
+    opacity: 0.5;
+}
+.footer-contacts {
+    float:right;
+    margin-top: -85px;
 }
